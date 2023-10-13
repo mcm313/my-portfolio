@@ -1,11 +1,12 @@
 import React from "react";
+import BackButton from "../Buttons/BackButton";
 
 function Project() {
   return (
-    <div>
+    <>
       <h1>Project</h1>
       <BackButton />
-    </div>
+    </>
   );
 }
 

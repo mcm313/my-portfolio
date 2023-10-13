@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Main from "./Components/Main";
+import Main from "./Pages/Main";
 import "./index.css";
-import Home from "./Components/Home";
-import ErrorPage from "./Components/ErrorPage";
-import About from "./Components/About";
+import Home from "./Pages/Home";
+import ErrorPage from "./Pages/ErrorPage";
+import About from "./Pages/About";
+import Project from "./Pages/Projects";
 
 const router = createBrowserRouter([
   {
@@ -13,10 +14,22 @@ const router = createBrowserRouter([
     element: <Main />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <Home /> },
       {
-        path: "about",
-        element: <About />,
+        errorElement: <ErrorPage />,
+        children: [
+          { index: true, element: <Home /> },
+          {
+            path: "about",
+            element: <About />,
+          },
+          {
+            path: "projects",
+            element: <Project />,
+          },
+          {
+            errorElement: <ErrorPage />,
+          },
+        ],
       },
     ],
   },
