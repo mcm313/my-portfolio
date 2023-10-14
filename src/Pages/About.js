@@ -32,11 +32,11 @@ function About() {
         xs={12}
         justifyContent="center"
         alignItems="center"
-        pX={5}
+        px={5}
       >
         <Grid item xs={4}></Grid>
         <Grid item xs={8} p={3}>
-          <Typography id="Home" variant="h3" component="h1">
+          <Typography className="Home" variant="h4" component="h1">
             HELLO
           </Typography>
           <Typography variant="body1" component="p">
@@ -47,7 +47,7 @@ function About() {
           </Typography>
         </Grid>
         <Grid item xs={8} p={3}>
-          <Typography variant="h3" component="h1">
+          <Typography variant="h4" component="h1">
             FRONTEND DEV
           </Typography>
           <Typography variant="body1" component="p">

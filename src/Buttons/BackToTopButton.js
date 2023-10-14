@@ -11,7 +11,7 @@ function BackToTopButton({ scrollTarget }) {
 
   const handleClick = (event) => {
     const anchor = (event.target.ownerDocument || document).querySelector(
-      "#Home"
+      ".Home"
     );
 
     if (anchor) {

@@ -32,7 +32,7 @@ function Home() {
         p={2}
       >
         <Grid item xs={5}>
-          <Typography id="Home" variant="h5" component="h2">
+          <Typography className="Home" variant="h5" component="h2">
             Hi, my name is
           </Typography>
           <Typography variant="h4" component="h1" textAlign={"right"}>
