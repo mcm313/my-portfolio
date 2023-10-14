@@ -2,17 +2,16 @@ import { Grid, IconButton } from "@mui/material";
 import React from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { Link, useOutletContext } from "react-router-dom";
+import { Link } from "react-router-dom";
+import "../Main.css";
 
 function SideBar() {
-  const adjustedMaxHeight = useOutletContext();
-
   return (
     <Grid
       container
+      className="sidebar"
       direction="column"
       justifyContent="center"
-      height={adjustedMaxHeight}
       spacing={1}
     >
       <Grid item xs={1}>

@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import SideBar from "../Buttons/SideBar";
-import { Button, Container, Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import BackToTopButton from "../Buttons/BackToTopButton";
-import { Link, useOutletContext } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../Main.css";
 
 function Home() {
-  const adjustedMaxHeight = useOutletContext();
   const [scrollTarget, setScrollTarget] = useState(undefined);
 
   return (
@@ -18,7 +17,6 @@ function Home() {
       }}
       container
       className="customGrid"
-      height={adjustedMaxHeight}
       overflow="auto"
     >
       <Grid item xs="auto">

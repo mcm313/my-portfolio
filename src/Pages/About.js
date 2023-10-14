@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 import BackButton from "../Buttons/BackButton";
-import {
-  Avatar,
-  AvatarGroup,
-  Grid,
-  IconButton,
-  Typography,
-} from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import "../Main.css";
-import { useOutletContext } from "react-router-dom";
 import BackToTopButton from "../Buttons/BackToTopButton";
 import HTML from "../pictures/html.png";
 import CSS from "../pictures/css.png";
@@ -20,7 +13,6 @@ import MUI from "../pictures/mui.png";
 import AvatarWithHover from "../Components/AvatarWIthHover";
 
 function About() {
-  const adjustedMaxHeight = useOutletContext();
   const [scrollTarget, setScrollTarget] = useState(undefined);
 
   return (
@@ -32,7 +24,6 @@ function About() {
       }}
       container
       className="customGrid"
-      height={adjustedMaxHeight}
       overflow="auto"
     >
       <Grid

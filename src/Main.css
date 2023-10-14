@@ -1,4 +1,18 @@
-.customGrid {
+:root {
+  --appbar-height: 64px;
+}
+
+.customGrid,
+.sidebar {
   background-color: lightsteelblue;
   color: blanchedalmond;
+  height: calc(100vh - var(--appbar-height));
+}
+
+#error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
