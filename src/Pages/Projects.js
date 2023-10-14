@@ -41,9 +41,9 @@ function Projects() {
         <Grid item xs="auto">
           <Project
             projectSrc={projectSrc1}
-            projectName="Sample Website"
-            projectLink="https://www.freepik.com/free-photos-vectors/simple-website"
-            projectNarrative="This is just a sample project for Testing"
+            projectName="Checklist"
+            projectLink="https://my-checklist.onrender.com"
+            projectNarrative="Simple checklist for everybody"
           />
         </Grid>
       </Grid>
