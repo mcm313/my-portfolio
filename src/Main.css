@@ -1,12 +1,39 @@
 :root {
-  --appbar-height: 64px;
+  --appbar-height: 44px;
+  --footer-height: 12px;
 }
 
-.customGrid,
-.sidebar {
-  background-color: lightsteelblue;
-  color: blanchedalmond;
+.customMain {
+  height: 100vh;
+  background-image: radial-gradient(#5d6652 55%, #3e4535);
+}
+
+.customPage {
   height: calc(100vh - var(--appbar-height));
+  color: white;
+}
+
+.customGridHeight {
+  height: 50%;
+}
+
+.fullHeight {
+  height: 100%;
+}
+
+#skillSet {
+  background-image: linear-gradient(#3e4535, #5d6652, #3e4535);
+  height: 100%;
+}
+
+#projectPage {
+  background-image: linear-gradient(to right, #d4e5a3, #f3e097);
+}
+
+#projectTitle {
+  background: linear-gradient(to bottom, #3e4535, transparent 80%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #error-page {
@@ -15,4 +42,16 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  background-image: radial-gradient(#5d6652 55%, #3e4535);
+  height: 100vh;
+  color: #d4e5a3;
+}
+
+.image-name {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
 }

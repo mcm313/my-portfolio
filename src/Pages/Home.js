@@ -1,64 +1,50 @@
 import React, { useState } from "react";
-import SideBar from "../Buttons/SideBar";
-import { Button, Grid, Typography } from "@mui/material";
+import { Button, Grid, styled } from "@mui/material";
 import BackToTopButton from "../Buttons/BackToTopButton";
 import { Link } from "react-router-dom";
+import Logo from "../pictures/my-logo.png";
 import "../Main.css";
+import Footer from "../Components/Footer";
 
 function Home() {
-  const [scrollTarget, setScrollTarget] = useState(undefined);
+  const ColorButton = styled(Button)(({ theme }) => ({
+    border: "white",
+    color: "white",
+    backgroundColor: "#d4e5a3",
+    "&:hover": {
+      border: "#d4e5a3",
+      color: "#d4e5a3",
+      backgroundColor: "white",
+    },
+  }));
 
   return (
-    <Grid
-      ref={(node) => {
-        if (node) {
-          setScrollTarget(node);
-        }
-      }}
-      container
-      className="customGrid"
-      overflow="auto"
-    >
-      <Grid item xs="auto">
-        <SideBar />
-      </Grid>
+    <>
       <Grid
-        item
-        xs
         container
-        direction="column"
-        alignItems="center"
+        className="customMain"
+        overflow="auto"
+        alignContent="center"
         justifyContent="center"
-        p={2}
       >
-        <Grid item xs={5}>
-          <Typography className="Home" variant="h5" component="h2">
-            Hi, my name is
-          </Typography>
-          <Typography variant="h4" component="h1" textAlign={"right"}>
-            Maria Catherine Mori.
-          </Typography>
-          <Typography variant="h4" component="h1" textAlign={"right"}>
-            FRONTEND DEVELOPER.
-          </Typography>
-          <Grid item xs container justifyContent="center" alignItems="center">
-            <Grid item xs="auto" p={3}>
-              <Link to={"about"}>
-                <Button variant="outlined">About</Button>
-              </Link>
-            </Grid>
-            <Grid item xs="auto" p={3}>
-              <Link to={"projects"}>
-                <Button variant="outlined">Projects</Button>
-              </Link>
-            </Grid>
+        <Grid item xs="auto">
+          <img src={Logo} alt="Logo" width="450" />
+        </Grid>
+        <Grid item container justifyContent="center">
+          <Grid item xs="auto" p={3}>
+            <Link to={"about"}>
+              <ColorButton variant="outlined">About</ColorButton>
+            </Link>
+          </Grid>
+          <Grid item xs="auto" p={3}>
+            <Link to={"projects"}>
+              <ColorButton variant="outlined">Projects</ColorButton>
+            </Link>
           </Grid>
         </Grid>
       </Grid>
-      <Grid item xs={12}>
-        <BackToTopButton scrollTarget={scrollTarget} />
-      </Grid>
-    </Grid>
+      <Footer />
+    </>
   );
 }
 

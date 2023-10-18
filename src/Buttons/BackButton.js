@@ -17,7 +17,7 @@ function BackButton() {
         <Fab
           size="small"
           aria-label="return to home"
-          sx={{ backgroundColor: "lightsteelblue", color: "blanchedalmond" }}
+          sx={{ backgroundColor: "#d4e5a3", color: "#3e4535" }}
         >
           <KeyboardReturnIcon />
         </Fab>

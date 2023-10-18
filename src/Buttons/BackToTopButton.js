@@ -29,7 +29,7 @@ function BackToTopButton({ scrollTarget }) {
         role="presentation"
         sx={{
           position: "fixed",
-          bottom: 16,
+          bottom: 30,
           right: 16,
           backgroundColor: "transparent",
         }}
@@ -37,7 +37,7 @@ function BackToTopButton({ scrollTarget }) {
         <Fab
           size="small"
           aria-label="scroll back to top"
-          sx={{ backgroundColor: "lightsteelblue", color: "blanchedalmond" }}
+          sx={{ backgroundColor: "#3e4535", color: "#d4e5a3" }}
         >
           <KeyboardArrowUp />
         </Fab>

@@ -1,44 +1,42 @@
 import React, { useState } from "react";
-import BackButton from "../Buttons/BackButton";
 import { Grid, Typography } from "@mui/material";
 import projectSrc1 from "../pictures/project1.png";
 import "../Main.css";
 import Project from "../Components/Project";
-import BackToTopButton from "../Buttons/BackToTopButton";
+import MainBar from "../Components/MainBar";
+import Footer from "../Components/Footer";
+import ProjectTitle from "../Components/ProjectTitle";
 
 function Projects() {
-  const [scrollTarget, setScrollTarget] = useState(undefined);
   return (
-    <Grid
-      container
-      className="customGrid"
-      p={5}
-      overflow="auto"
-      ref={(node) => {
-        if (node) {
-          setScrollTarget(node);
-        }
-      }}
-    >
-      <Grid item xs={12}>
-        <Typography
-          className="Home"
-          variant="h3"
-          component="h1"
-          textAlign="center"
-        >
-          Project
-        </Typography>
-      </Grid>
+    <>
+      <MainBar />
       <Grid
-        item
         container
-        pt={3}
-        spacing={2}
+        id="projectPage"
+        className="customPage"
+        p={5}
+        overflow="auto"
         display="flex"
-        justifyContent="center"
+        alignContent="start"
       >
-        <Grid item xs="auto">
+        <Grid
+          item
+          xs={12}
+          display="flex"
+          justifyContent="center"
+          paddingBottom={5}
+        >
+          <ProjectTitle />
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          display="flex"
+          direction="column"
+          justifyContent="center"
+          rowGap={2}
+        >
           <Project
             projectSrc={projectSrc1}
             projectName="Checklist"
@@ -47,9 +45,8 @@ function Projects() {
           />
         </Grid>
       </Grid>
-      <BackButton />
-      <BackToTopButton scrollTarget={scrollTarget} />
-    </Grid>
+      <Footer />
+    </>
   );
 }
 

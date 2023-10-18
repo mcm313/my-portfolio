@@ -1,37 +1,28 @@
-import LaunchIcon from "@mui/icons-material/Launch";
-import {
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Typography,
-} from "@mui/material";
+import { Card, CardMedia, Grid, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 
 function Project({ projectSrc, projectName, projectLink, projectNarrative }) {
   return (
-    <Card
-      sx={{
-        maxWidth: 345,
-        backgroundColor: "blanchedalmond",
-        color: "#468759",
-      }}
-      raised
-    >
-      <CardMedia sx={{ height: 140 }} image={projectSrc} title={projectName} />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {projectName}
-        </Typography>
-        <Typography variant="body2">{projectNarrative}</Typography>
-      </CardContent>
-      <CardActions>
-        <Link to={projectLink} target="_blank" rel="noopener noreferrer">
-          <LaunchIcon />
-        </Link>
-      </CardActions>
-    </Card>
+    <>
+      <Grid container spacing={2} alignItems="center">
+        <Grid item xs={3}>
+          <Link to={projectLink} target="_blank" rel="noopener noreferrer">
+            <Card variant="outlined" sx={{ border: "1px dashed white" }}>
+              <CardMedia component="img" image={projectSrc} alt={projectName} />
+            </Card>
+          </Link>
+        </Grid>
+        <Grid item xs={9} display="flex" direction="column">
+          <Typography variant="h6" component="h1" lineHeight={1}>
+            <i>{projectName}</i>
+          </Typography>
+          <Typography variant="body2" component="p" lineHeight={1}>
+            {projectNarrative}
+          </Typography>
+        </Grid>
+      </Grid>
+    </>
   );
 }
 
