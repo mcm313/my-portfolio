@@ -1,6 +1,6 @@
 import React from "react";
 import { Grid, Typography } from "@mui/material";
-import HTML from "../pictures/HTML.png";
+import HTML from "../pictures/HTML.jpg";
 import CSS from "../pictures/CSS.jpg";
 import SCSS from "../pictures/scss.jpg";
 import JS from "../pictures/javascript.jpg";
