@@ -1,26 +1,27 @@
 import React from "react";
 import MainBar from "../Components/MainBar";
 import Footer from "../Components/Footer";
-import AboutMe from "../Components/AboutMe";
+import Projects from "../Components/Projects";
 import { Grid } from "@mui/material";
 
-function About() {
+function ProjectPage() {
   return (
     <>
       <MainBar />
       <Grid
         container
+        id="projectPage"
         className="customPage"
+        p={5}
         overflow="auto"
-        xs={12}
-        alignItems="center"
-        sx={{ backgroundColor: "#cee7a6" }}
+        display="flex"
+        alignContent="start"
       >
-        <AboutMe />
+        <Projects />
       </Grid>
       <Footer />
     </>
   );
 }
 
-export default About;
+export default ProjectPage;

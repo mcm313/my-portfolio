@@ -10,11 +10,6 @@
 
 .customPage {
   height: calc(100vh - var(--appbar-height));
-  color: white;
-}
-
-.customGridHeight {
-  height: 50%;
 }
 
 .fullHeight {
@@ -34,6 +29,7 @@
   background: linear-gradient(to bottom, #3e4535, transparent 80%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-size: 5rem;
 }
 
 #error-page {

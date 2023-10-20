@@ -7,7 +7,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 function MainBar() {
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#3e4535" }}>
+    <AppBar position="sticky" sx={{ backgroundColor: "#3e4535" }}>
       <Grid container display="inline-flex" alignItems="center" padding={0.75}>
         <Grid item xs={6}>
           <Link to={"/"}>

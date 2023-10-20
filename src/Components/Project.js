@@ -13,7 +13,13 @@ function Project({ projectSrc, projectName, projectLink, projectNarrative }) {
             </Card>
           </Link>
         </Grid>
-        <Grid item xs={9} display="flex" direction="column">
+        <Grid
+          item
+          xs={9}
+          display="flex"
+          direction="column"
+          sx={{ color: "#5d6652" }}
+        >
           <Typography variant="h6" component="h1" lineHeight={1}>
             <i>{projectName}</i>
           </Typography>

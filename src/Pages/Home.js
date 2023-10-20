@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Grid, styled } from "@mui/material";
-import BackToTopButton from "../Buttons/BackToTopButton";
 import { Link } from "react-router-dom";
 import Logo from "../pictures/my-logo.png";
 import "../Main.css";
@@ -17,7 +16,6 @@ function Home() {
       backgroundColor: "white",
     },
   }));
-
   return (
     <>
       <Grid
@@ -28,7 +26,7 @@ function Home() {
         justifyContent="center"
       >
         <Grid item xs="auto">
-          <img src={Logo} alt="Logo" width="450" />
+          <img src={Logo} alt="Logo" width="445" />
         </Grid>
         <Grid item container justifyContent="center">
           <Grid item xs="auto" p={3}>
