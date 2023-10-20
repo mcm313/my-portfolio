@@ -1,5 +1,4 @@
 import React from "react";
-import "react-alice-carousel/lib/alice-carousel.css";
 import { Grid, Typography } from "@mui/material";
 import "../Main.css";
 import Skills from "../Components/Skills";
@@ -14,6 +13,7 @@ function AboutMe() {
         px={12}
         justifyContent="center"
         sx={{ color: "white" }}
+        id="AboutMe"
       >
         <Typography
           className="Home"
@@ -49,7 +49,7 @@ function AboutMe() {
         sx={{ backgroundColor: "#cee7a6" }}
       >
         <Grid container display="flex" alignContent="center">
-          <Grid item xs={12} px={3} sx={{ color: "#c3d79c" }}>
+          <Grid item xs={12} px={3} sx={{ color: "#c3d79c" }} id="Skills">
             <Typography variant="h3" component="h1" marginBottom={-1.75}>
               <b>MY SKILLS</b>
             </Typography>

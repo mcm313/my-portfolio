@@ -5,7 +5,7 @@ import ErrorPage from "./Pages/ErrorPage";
 import About from "./Pages/About";
 import ProjectPage from "./Pages/ProjectPage";
 import Summary from "./Pages/Summary";
-import useMediaQuery from "@mui/material/useMediaQuery";
+import { BrowserView, MobileView } from "react-device-detect";
 
 const router1 = createBrowserRouter([
   {
@@ -38,11 +38,12 @@ const router2 = createBrowserRouter([
 function Root() {
   return (
     <>
-      {useMediaQuery("(max-width:1024px)") ? (
+      <BrowserView>
         <RouterProvider router={router1} />
-      ) : (
+      </BrowserView>
+      <MobileView>
         <RouterProvider router={router2} />
-      )}
+      </MobileView>
     </>
   );
 }

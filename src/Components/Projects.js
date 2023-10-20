@@ -13,6 +13,7 @@ function Projects() {
         display="flex"
         justifyContent="center"
         paddingBottom={5}
+        id="Projects"
       >
         <Typography
           className="Home"
