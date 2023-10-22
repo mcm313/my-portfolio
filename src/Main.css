@@ -21,8 +21,13 @@
   height: 100%;
 }
 
+#aboutmePage {
+  min-height: calc(100vh - var(--appbar-height));
+}
+
 #projectPage {
   background-image: linear-gradient(to right, #d4e5a3, #f3e097);
+  min-height: calc(100vh - var(--appbar-height));
 }
 
 #projectTitle {

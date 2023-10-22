@@ -5,7 +5,7 @@ import Title from "../Components/Title";
 import AboutMe from "../Components/AboutMe";
 import MainBar from "../Components/MainBar";
 import { Grid } from "@mui/material";
-import ProjectSum from "../Components/Projects";
+import Projects from "../Components/Projects";
 
 function Summary() {
   return (
@@ -19,6 +19,7 @@ function Summary() {
           xs={12}
           alignItems="center"
           sx={{ backgroundColor: "#cee7a6" }}
+          id="aboutmePage"
         >
           <AboutMe />
         </Grid>
@@ -30,7 +31,7 @@ function Summary() {
           display="flex"
           alignContent="start"
         >
-          <ProjectSum />
+          <Projects />
         </Grid>
       </Grid>
       <FooterSum />

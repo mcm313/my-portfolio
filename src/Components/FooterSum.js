@@ -48,7 +48,7 @@ function FooterSum() {
             <Button
               variant="text"
               onClick={handleClickAbout}
-              sx={{ color: "white" }}
+              sx={{ color: "white", lineHeight: "1px" }}
             >
               <b>About</b>
             </Button>
@@ -57,7 +57,7 @@ function FooterSum() {
             <Button
               variant="text"
               onClick={handleClickSkills}
-              sx={{ color: "white" }}
+              sx={{ color: "white", lineHeight: "1px" }}
             >
               <b>Skills</b>
             </Button>
@@ -66,7 +66,7 @@ function FooterSum() {
             <Button
               variant="text"
               onClick={handleClickProjects}
-              sx={{ color: "white" }}
+              sx={{ color: "white", lineHeight: "1px" }}
             >
               <b>Projects</b>
             </Button>

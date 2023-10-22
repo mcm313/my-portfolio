@@ -38,12 +38,13 @@ const router2 = createBrowserRouter([
 function Root() {
   return (
     <>
-      <BrowserView>
+      {/* <BrowserView>
         <RouterProvider router={router1} />
       </BrowserView>
       <MobileView>
         <RouterProvider router={router2} />
-      </MobileView>
+      </MobileView> */}
+      <RouterProvider router={router2} />
     </>
   );
 }
