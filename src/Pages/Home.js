@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Logo from "../pictures/my-logo.png";
 import "../Main.css";
 import Footer from "../Components/Footer";
+import { motion } from "framer-motion";
 
 function Home() {
   const ColorButton = styled(Button)(({ theme }) => ({
@@ -16,6 +17,9 @@ function Home() {
       backgroundColor: "white",
     },
   }));
+
+  const ColorButtonMotion = motion(ColorButton);
+
   return (
     <>
       <Grid
@@ -26,17 +30,40 @@ function Home() {
         justifyContent="center"
       >
         <Grid item xs="auto">
-          <img src={Logo} alt="Logo" width="445" />
+          <motion.img
+            initial={{ opacity: 0, x: "-10rem" }}
+            animate={{ opacity: 1, x: "0" }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            src={Logo}
+            alt="Logo"
+            width="445"
+          />
         </Grid>
         <Grid item container justifyContent="center">
           <Grid item xs="auto" p={3}>
             <Link to={"about"}>
-              <ColorButton variant="outlined">About</ColorButton>
+              <ColorButtonMotion
+                variant="outlined"
+                initial={{ opacity: 0, x: "-10rem" }}
+                animate={{ opacity: 1, x: "0" }}
+                transition={{ duration: 0.5, delay: 1 }}
+                layout
+              >
+                About
+              </ColorButtonMotion>
             </Link>
           </Grid>
           <Grid item xs="auto" p={3}>
             <Link to={"projects"}>
-              <ColorButton variant="outlined">Projects</ColorButton>
+              <ColorButtonMotion
+                variant="outlined"
+                initial={{ opacity: 0, x: "-10rem" }}
+                animate={{ opacity: 1, x: "0" }}
+                transition={{ duration: 0.5, delay: 1 }}
+                layout
+              >
+                Projects
+              </ColorButtonMotion>
             </Link>
           </Grid>
         </Grid>

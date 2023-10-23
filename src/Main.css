@@ -5,7 +5,7 @@
 
 .customMain {
   height: 100vh;
-  background-image: radial-gradient(#5d6652 55%, #3e4535);
+  background-image: radial-gradient(circle, #5d6652, #3e4535 55%);
 }
 
 .customPage {

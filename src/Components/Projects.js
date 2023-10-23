@@ -3,8 +3,11 @@ import React from "react";
 import "../Main.css";
 import ProjectList from "../Data/ProjectList";
 import Project from "./Project";
+import { motion } from "framer-motion";
 
 function Projects() {
+  const TypographyMotion = motion(Typography);
+
   return (
     <Grid container>
       <Grid
@@ -15,14 +18,17 @@ function Projects() {
         paddingBottom={5}
         id="Projects"
       >
-        <Typography
+        <TypographyMotion
+          initial={{ opacity: 0, y: "5rem" }}
+          whileInView={{ opacity: 1, y: "0" }}
+          transition={{ duration: 1, delay: 1 }}
           className="Home"
           variant="h1"
           component="h1"
           id="projectTitle"
         >
           <b>PROJECTS</b>
-        </Typography>
+        </TypographyMotion>
       </Grid>
       <Grid
         item
