@@ -3,15 +3,10 @@ import projectSrc1 from "../pictures/project1.png";
 const ProjectList = [
   {
     src: projectSrc1,
-    name: "Checklist",
-    link: "https://my-checklist.onrender.com",
-    narrative: "Simple checklist for everybody",
-  },
-  {
-    src: projectSrc1,
-    name: "Checklist",
-    link: "https://my-checklist.onrender.com",
-    narrative: "Simple checklist for everybody",
+    name: "100 Bucketlist",
+    link: "https://one00-bucketlist.onrender.com",
+    narrative:
+      "THIS IS A FREE BUCKETLIST MAKER TO HELP MAKE YOUR LIFE CHALLENGING",
   },
 ];
 
