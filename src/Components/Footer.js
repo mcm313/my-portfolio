@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Grid, Typography, IconButton } from "@mui/material";
+import { AppBar, Grid, Typography } from "@mui/material";
 import { Copyright } from "@mui/icons-material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
