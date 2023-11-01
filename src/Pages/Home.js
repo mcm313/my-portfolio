@@ -9,12 +9,12 @@ import { motion } from "framer-motion";
 function Home() {
   const ColorButton = styled(Button)(({ theme }) => ({
     border: "white",
-    color: "white",
+    color: "#3e4535",
     backgroundColor: "#d4e5a3",
     "&:hover": {
       border: "#d4e5a3",
       color: "#d4e5a3",
-      backgroundColor: "white",
+      backgroundColor: "#3e4535",
     },
   }));
 

@@ -1,4 +1,4 @@
-import { Card, CardMedia, Grid, Typography } from "@mui/material";
+import { Card, CardMedia, Divider, Grid, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -17,7 +17,6 @@ function Project({ projectSrc, projectName, projectLink, projectNarrative }) {
               whileInView={{ opacity: 1, x: "0" }}
               transition={{ duration: 1, delay: 1 }}
               variant="outlined"
-              sx={{ border: "1px dashed white" }}
             >
               <CardMedia component="img" image={projectSrc} alt={projectName} />
             </CardMotion>
@@ -34,17 +33,20 @@ function Project({ projectSrc, projectName, projectLink, projectNarrative }) {
             initial={{ opacity: 0, x: "5rem" }}
             whileInView={{ opacity: 1, x: "0" }}
             transition={{ duration: 1, delay: 1 }}
-            variant="h6"
+            variant="h4"
             component="h1"
             lineHeight={1}
           >
             <i>{projectName}</i>
           </TypographyMotion>
+          <br></br>
+          <Divider variant="middle" />
+          <br></br>
           <TypographyMotion
             initial={{ opacity: 0, x: "5rem" }}
             whileInView={{ opacity: 1, x: "0" }}
             transition={{ duration: 1, delay: 1 }}
-            variant="body2"
+            variant="body1"
             component="p"
             lineHeight={1}
           >
