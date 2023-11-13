@@ -1,19 +1,22 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow } from "swiper/modules";
+import { EffectCoverflow, Scrollbar, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/effect-coverflow";
+import "swiper/css/scrollbar";
 import SkillLists from "../Data/SkillList";
 
 function Skills() {
   return (
     <Swiper
-      modules={[EffectCoverflow]}
+      modules={[EffectCoverflow, Scrollbar, Autoplay]}
       spaceBetween={30}
       slidesPerView={3}
       centeredSlides="true"
       effect="coverflow"
+      scrollbar
+      autoplay={{ delay: 1000 }}
     >
       {SkillLists.map((item, index) => (
         <SwiperSlide>
